@@ -8,19 +8,20 @@ def Search():
         while found == False:
             line = Doc.readline()
             lineNum += 1
-            print(line , ":")
-            if str(line) == str(Num):
-                print(line , " : " , Doc.readline())
+            if str(line) == str(Num + "\n"):
+                print(line)
+                print(Doc.readline())
                 found = True
                 return lineNum
     elif NP == 'N' or NP == 'n':
          Name = input("Enter the first and last names: ")
-         last = Doc.readline()
-         lineNum += 1
          while found == False:
+             last = Doc.readline()
              line = Doc.readline()
-             if line == Name:
-                 print(line , " : ", last)
+             lineNum += 1
+             if line == (Name + "\n"):
+                 print(line)
+                 print(last)
                  found = True
                  return lineNum
              else:
