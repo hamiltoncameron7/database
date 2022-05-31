@@ -31,8 +31,8 @@ def Append():
     N = input("Enter the first and last names: ")
     P = input("Enter the phone number (No spaces, parentheses or dashes): ")
     Doc = open("db.txt", "a")
-    Doc.write(P + "\n")
-    Doc.write(N + "\n")
+    Doc.write("\n" + P)
+    Doc.write("\n" + N)
     print("Added entry!")
 
 def Delete():
